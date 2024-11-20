@@ -4,7 +4,6 @@ Library functions for ETL and queries
 
 import os
 import requests
-import pandas
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import when, col
 

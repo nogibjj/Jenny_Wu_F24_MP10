@@ -3,7 +3,6 @@ Test goes here
 
 """
 import pytest
-import pandas
 
 from mylib.lib import (
     start_spark,
