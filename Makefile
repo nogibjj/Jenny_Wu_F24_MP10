@@ -19,4 +19,7 @@ container-lint:
 
 refactor: format lint
 
-all: install lint test format 
+deploy:
+	#insert code here
+
+all: install lint test format deploy
