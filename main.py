@@ -1,36 +1,30 @@
-"""
-Main cli or app entry point
-"""
-
 from mylib.lib import (
     extract,
     load_data,
-    describe,
     query,
-    example_transform,
+    transform,
     start_spark,
     end_spark,
 )
 
 
 def main():
-    # extract data
+    # Extract data
     extract()
-    # start spark session
-    spark = start_spark("DailyShowGuests")
-    # load data into dataframe
+    # Start Spark session
+    spark = start_spark("nypd_shooting")
+    # Load data into DataFrame
     df = load_data(spark)
-    # example metrics
-    describe(df)
-    # query
+    # Query
     query(
         spark,
         df,
-        "SELECT YEAR, COUNT(*) AS guest_count FROM guests GROUP BY YEAR ORDER BY YEAR",
-        "guests",
+        """SELECT *
+           FROM nypd_shooting 
+           WHERE incident_key = 279473159 """, "nypd_shooting",
     )
-    # example transform
-    example_transform(df)
+    # transform by borough cardinal direction
+    transform(df)
     # end spark session
     end_spark(spark)
 
