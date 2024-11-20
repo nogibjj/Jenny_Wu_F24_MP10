@@ -14,5 +14,6 @@ uvicorn==0.18.3
 pyspark
 requests
 tabulate
+pandas>=1.0.5
 
 
