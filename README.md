@@ -2,4 +2,4 @@
 
 # Mini Project 10: PySpark Data Processing
 ---
-##### The purpose of this project is to utilize PySpark to complete a data analysis on a large dataset. h
+##### The purpose of this project is to utilize PySpark to complete a data analysis on a large dataset. he
